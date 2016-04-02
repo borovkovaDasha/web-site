@@ -1,0 +1,159 @@
+<!doctype html>
+<head>
+<style>
+	@media(max-width:768px){
+		#sidemenu{
+			display:none; 
+		}
+	}
+	body{
+		background:#b0d6d6;
+	}
+	#wrapp{
+		width: 990px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.header {
+		height:250px;
+		background:#f6d1b4;
+		background-image:url(head.jpg); 
+		background-position:center;
+	}
+	.topmenu {
+		height: 50px;
+		background: #dea791;
+		text-align:center;
+		vertical-align:center;
+		border: 1px dotted #e8cdc6;
+		border-radius:10px;
+	}
+	.topcontent{
+		height:80px;
+		background:#e8cdc6
+		font-family: "Times New Roman", Times, serif;
+		text-align: center;
+		font-size:140%;
+		font-weight:bold;
+		border: 2px dotted #e8cdc6;
+		border-radius:10px;
+		margin:5px;
+	}
+	.mainbody {
+		height:1024px;
+		width:80%;
+		float:left;
+	}
+	.mainbody_width {
+		height:1024px;
+		width:100%;
+	}
+	.mainbodyaction {
+		height:1024px;
+		width:80%;
+		float:left;
+	}
+	#sidemenu {
+		height:600px;
+		width:198px;
+		background: #e2dfe6;
+		background-image:url(5.jpeg); 
+		float:right;
+	}
+	.column{
+		width:32%;
+		height:1200px;
+		border: 2px solid #b0d6d6;
+		float:left;
+		text-align: left;
+	}
+	.row{
+		float:top;
+		margin-top:3px;
+		border: 2px solid #b0d6d6;
+	}
+	.frame {
+		border: 1px solid #e8cdc6;
+	}
+	#top_button {
+		position:fixed;
+		background-image:URL('5.jpeg');
+		width:50px;
+		height:50px;
+		left:90%;
+		top:90%;
+		border: 1px double black;
+		border-radius:50px;
+	}
+	#top_button:hover {
+		width:55px;
+		height:55px;
+		border: 1px double #e8cdc6;
+		border-radius:50px;
+	}
+</style> 
+<script type="text/javascript">
+	var runOnScroll = function(evt) {
+		var doc = document.documentElement;
+		var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+		
+		if (top > 900) {
+			document.getElementById('sidemenu').style.visibility = "hidden";
+			document.getElementById('mainbody').style.width = 100 + '%';
+		} else {
+			document.getElementById('sidemenu').style.visibility = "visible";
+			document.getElementById('mainbody').style.width = 80 + "%";
+		}
+	};
+	window.addEventListener("scroll", runOnScroll);
+</script>
+<title> Welcome page </title>
+</head>
+	<body>
+		<div id="top_button">
+			<a href="" style="position:relative; width:100%; height:100%; text-decoration:none; text-align:center;">
+				<p style="font-weight: bold; font-size: 14px; text-align: center; margin: 0px; text-decoration:none;width:100%; height:100%; text-align:center;"></p>
+			</a>
+		</div>
+		<div id="wrapp">
+			<div class="header">
+			</div>
+			<div class="topmenu"> 
+				<p style="font-weight: bold; font-size: 100%; margin: 0px; align:center; vertical-align:center;">  
+					<strong>TOP MENU</strong>
+				</p>
+			</div>
+			<div class="topcontent" >
+				<p style="align:center; vertical-align:center;">
+					TOP CONTENT
+				</p>
+			</div>
+			<div class="mainbody" id = "mainbody"> 
+				<div class="column">
+					<div class="row"> <img src="1.jpg" width="100%" align="center" class = "frame"/> </div>
+					<div class="row"> <img src="2.jpg" width="100%" align="center" class = "frame"/> </div>
+					<div class="row"> <img src="3.jpg" width="100%" align="center" class = "frame"/> </div>	
+					<div class="row"> <img src="13.jpg" width="100%" align="center" class = "frame"/> </div>	
+				</div>
+				<div class="column">
+					<div class="row"> <img src="4.jpg" width="100%" align="center" class = "frame"/> </div>
+					<div class="row"> <img src="6.jpg" width="100%" align="center" class = "frame"/> </div>
+					<div class="row"> <img src="11.jpg" width="100%" align="center" class = "frame"/> </div>
+					<div class="row"> <img src="10.jpg" width="100%" align="center" class = "frame"/> </div>	
+				</div>
+				<div class="column">
+					<div class="row"> <img src="9.jpg" width="100%" align="center" class = "frame"/> </div>
+					<div class="row"> <img src="7.jpg" width="100%" align="center" class = "frame"/> </div>
+					<div class="row"> <img src="12.jpg" width="100%" align="center" class = "frame"/> </div>
+					<div class="row"> <img src="8.jpg" width="100%" align="center" class = "frame"/> </div>				
+				</div>		
+			</div>
+			
+			<div id="sidemenu">
+				<p style="font-weight: bold; font-size: 150%; text-align: center; margin: 0px;">
+					Menu <hr style="width:80%;">
+				</p>
+			</div>
+		</div>
+	</body> 
+</html> 
